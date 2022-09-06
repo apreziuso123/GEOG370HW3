@@ -6,23 +6,58 @@
     <title>Projections</title>
 </head>
 <body>
-    <h1>In this project I learned how to display images in different projections</h1>
+    <h1>Various World Projections by Antonio Preziuso</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2 style="color:red">Description of Methods Used:</h2>
+    <p>To complete this homework, I utilized QGIS and a plug-in called Tissot's indicatrix. I began by using the data provided by Professor Arce-Nazario from the Natural Earth Vector dataset. Using this .shp file, I created 7 seperate maps and used QGIS's Coordinate Reference System function to change which projection was being used for each map. Using the plug-in Tissot's indicatrix, I created one layer displaying "graticule" and one layer displaying "caps." Together these two layers reveal how each projection can cause disortions in shape, area, distance, and direction. Using Layout Manager, I was able to label each map with the Projection Name and its respective EPSG number. I then exported each map as a .png, placed it in my repository on GitHub, and embedded them in this page.</p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The WGS84 Projection is an equidistant cylindrical projection. By looking at the ellipses from Tissot's indicatrix on the map, we can see that both size and shape are disorted. However, distance was preserved in this projection as a constant scale was maintained between points.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The Aitoff Projection is a compromise projection. Therefore, shape, area, distance, and direction are all disorted to some degree. Based on my observations, this projection has similarities to azimuthal projections, however, Tissot's indicatrix reveals that the graticule have been modified into an ellipse-like shape. </h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2>Pseudo-Mercator Projection</h2>
+    <h3>The Pseudo-Mercator Projection is a conformal projection that conserves shape but disorts area. This is visualized by the circles from Tissot's indicatrix, which are all the same shape but of increasing size as you move toward the poles.</h3>
+    <a href="./maps/3857.png">
+    <img src="./maps/3857.png" alt="Pseudo-Mercator" width='500px'>
+    </a>
+    <h2>Sphere_Winkel_I Projection</h2>
+    <h3>The Sphere_Winkel_I Projection is a compromise projection. Therefore, shape, area, distance, and direction are all disorted to some degree. Based on my observations, the Tissot's indicatrix for this projection is similar to that for Aitoff's projection. Furthermore, this projection shares similarities with the equidistant cylindrical projections in terms of area.</h3>
+    <a href="./maps/53018.png">
+    <img src="./maps/53018.png" alt="Sphere_Winkel_I" width='500px'>
+    </a>
+    <h2>World_Cylindrical_Equal_Area Projection</h2>
+    <h3>The World_Cylindrical_Equal_Area Projection is an equal-area projection that preserves area but disorts shape. This is illustrated by Tissot's indicatrix. In particular, the ellipses from Tissot's indicatrix are heavily disorted in shape as you move toward the poles. However, these ellipses are all of equal area.</h3>
+    <a href="./maps/54034.png">
+    <img src="./maps/54034.png" alt="World_Cylindrical_Equal_Area" width='500px'>
+    </a>
+    <h2>World_Equidistant_Conic Projection</h2>
+    <h3>The World_Equidistant_Conic Projection is an equidistant projection that preserves distances. However, shape, area, and direction are all heavily disorted as you move outwards from the center of the projection.</h3>
+    <a href="./maps/54027.png">
+    <img src="./maps/54027.png" alt="World_Equidistant_Conic" width='500px'>
+    </a>
+    <h2>North_Pole_Azimuthal_Equidistant Projection</h2>
+    <h3>The North_Pole_Azimuthal_Equidistant Projection is an azimuthal projection that preserves all distances from the center point. Furthermore, direction to all points from the center point is preserved. However, as evident in Tissot's indicatrix, shape and area are disorted. </h3>
+    <a href="./maps/102016.png">
+    <img src="./maps/102016.png" alt="North_Pole_Azimuthal_Equidistant" width='500px'>
+    </a>
+    <h2>World_Van_der_Grinten_I Projection</h2>
+    <h3>The World_Van_der_Grinten_I Projection is a compromise projection. Because of this, area, shape, direction, and distance are all somewhat disorted. Based on my observations of Tissot's indicatrix, this projection shares similarities in appearance to the Mercator projection except it uses curved graticule.</h3>
+    <a href="./maps/54029.png">
+    <img src="./maps/54029.png" alt="World_Van_der_Grinten_I" width='500px'>
+    </a>
+    <h2>Google Maps Global Mercator Projection</h2>
+    <h3>The Google Maps Global Mercator Projection is a conformal projection that conserves shape but disorts area. Much like the Pseudo-Mercator projection, this projection has Tissot's indicatrix ellipses of the same shape but of increasing size as you move toward the poles, disorting area.</h3>
+    <a href="./maps/900913.png">
+    <img src="./maps/900913.png" alt="Google Maps Global Mercator" width='500px'>
+    </a>
+    <h2 style="color:red"></h2>
+    <h3></h3>
     <p></p>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
